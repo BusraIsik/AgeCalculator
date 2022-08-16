@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AgeCalculator.Users>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Birthdate</th>
+            <th>Gender</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.Birthdate.ToString().Substring(0,10)</td>
+                <td>@item.Gender</td>
+                <td>@item.City</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
