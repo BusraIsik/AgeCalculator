@@ -20,5 +20,6 @@ namespace AgeCalculator
         public System.DateTime Birthdate { get; set; }
         public string Gender { get; set; }
         public string City { get; set; }
+        public Nullable<int> Age { get; set; }
     }
 }
